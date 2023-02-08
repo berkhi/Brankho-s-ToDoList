@@ -65,11 +65,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your note here!" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ono-fy-f0Q">
-                                <rect key="frame" x="16" y="195" width="361" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-FP-gMB">
                                 <rect key="frame" x="32" y="153" width="104" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -77,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-7M-yA5">
-                                <rect key="frame" x="16" y="195" width="361" height="586"/>
+                                <rect key="frame" x="16" y="237" width="361" height="544"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -88,21 +83,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your note here!" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ono-fy-f0Q">
+                                <rect key="frame" x="16" y="195" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iyt-gf-pju"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o35-Xa-7fL" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="49" id="1c8-v5-y3l"/>
-                            <constraint firstItem="ono-fy-f0Q" firstAttribute="top" secondItem="Oes-7M-yA5" secondAttribute="top" id="78k-cb-FWo"/>
-                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="OE7-FP-gMB" secondAttribute="leading" id="EuM-Rq-jLS"/>
-                            <constraint firstItem="ono-fy-f0Q" firstAttribute="leading" secondItem="p8u-F9-eyi" secondAttribute="leadingMargin" id="I6d-Of-ugD"/>
-                            <constraint firstItem="Oes-7M-yA5" firstAttribute="top" secondItem="OE7-FP-gMB" secondAttribute="bottom" constant="14" id="JtG-Gk-dQz"/>
-                            <constraint firstItem="ono-fy-f0Q" firstAttribute="leading" secondItem="Oes-7M-yA5" secondAttribute="leading" id="KMJ-yV-Snh"/>
-                            <constraint firstItem="Iyt-gf-pju" firstAttribute="bottom" secondItem="Oes-7M-yA5" secondAttribute="bottom" constant="37" id="c5c-5s-aAW"/>
-                            <constraint firstItem="OE7-FP-gMB" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="50" id="luz-IC-cpm"/>
-                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="Iyt-gf-pju" secondAttribute="leading" constant="32" id="nIN-TZ-wFi"/>
-                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="Oes-7M-yA5" secondAttribute="trailing" id="xf0-ae-PKl"/>
-                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="p8u-F9-eyi" secondAttribute="trailingMargin" id="yGV-Cj-0TC"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="Oes-7M-yA5" secondAttribute="trailing" id="31a-XB-587"/>
+                            <constraint firstItem="OE7-FP-gMB" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="50" id="3fc-Kf-TGN"/>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="49" id="ArK-Pb-ON1"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="top" secondItem="Oes-7M-yA5" secondAttribute="top" constant="-42" id="I8C-59-VF5"/>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="Iyt-gf-pju" secondAttribute="leading" constant="32" id="Nji-BM-Slt"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="p8u-F9-eyi" secondAttribute="trailingMargin" id="OGJ-VR-a86"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="top" secondItem="OE7-FP-gMB" secondAttribute="bottom" constant="14" id="Rql-Ld-aPd"/>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="OE7-FP-gMB" secondAttribute="leading" id="k1T-gw-9M5"/>
+                            <constraint firstItem="Iyt-gf-pju" firstAttribute="bottom" secondItem="Oes-7M-yA5" secondAttribute="bottom" constant="37" id="q6t-5g-zis"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="leading" secondItem="Oes-7M-yA5" secondAttribute="leading" id="skX-E9-Af0"/>
+                            <constraint firstItem="Oes-7M-yA5" firstAttribute="leading" secondItem="p8u-F9-eyi" secondAttribute="leadingMargin" id="wIL-nM-Xjd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q94-eI-pry">
