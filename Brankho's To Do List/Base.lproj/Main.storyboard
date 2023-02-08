@@ -18,17 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fyd-Qf-2Zx">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="146" width="393" height="672"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-4a-jsU">
+                                <rect key="frame" x="16" y="103" width="82" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vrQ-4a-jsU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8KO-Zf-1Lo"/>
                             <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dlb-cp-LfE"/>
-                            <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OZe-p6-Te9"/>
+                            <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="OZe-p6-Te9"/>
                             <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VAs-OU-LTm"/>
                             <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y7y-eZ-8eK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vrQ-4a-jsU" secondAttribute="trailing" constant="295" id="aZ5-2X-d5A"/>
+                            <constraint firstItem="Fyd-Qf-2Zx" firstAttribute="top" secondItem="vrQ-4a-jsU" secondAttribute="bottom" constant="8" id="nxV-IT-dhT"/>
+                            <constraint firstItem="vrQ-4a-jsU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w10-dg-ULl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O8b-gz-2AK">
@@ -55,20 +65,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your note here!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ono-fy-f0Q">
-                                <rect key="frame" x="37" y="154" width="318" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your note here!" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ono-fy-f0Q">
+                                <rect key="frame" x="16" y="195" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-FP-gMB">
+                                <rect key="frame" x="32" y="153" width="104" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-7M-yA5">
+                                <rect key="frame" x="16" y="195" width="361" height="586"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o35-Xa-7fL">
+                                <rect key="frame" x="32" y="152" width="74" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iyt-gf-pju"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="49" id="1c8-v5-y3l"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="top" secondItem="Oes-7M-yA5" secondAttribute="top" id="78k-cb-FWo"/>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="OE7-FP-gMB" secondAttribute="leading" id="EuM-Rq-jLS"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="leading" secondItem="p8u-F9-eyi" secondAttribute="leadingMargin" id="I6d-Of-ugD"/>
+                            <constraint firstItem="Oes-7M-yA5" firstAttribute="top" secondItem="OE7-FP-gMB" secondAttribute="bottom" constant="14" id="JtG-Gk-dQz"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="leading" secondItem="Oes-7M-yA5" secondAttribute="leading" id="KMJ-yV-Snh"/>
+                            <constraint firstItem="Iyt-gf-pju" firstAttribute="bottom" secondItem="Oes-7M-yA5" secondAttribute="bottom" constant="37" id="c5c-5s-aAW"/>
+                            <constraint firstItem="OE7-FP-gMB" firstAttribute="top" secondItem="Iyt-gf-pju" secondAttribute="top" constant="50" id="luz-IC-cpm"/>
+                            <constraint firstItem="o35-Xa-7fL" firstAttribute="leading" secondItem="Iyt-gf-pju" secondAttribute="leading" constant="32" id="nIN-TZ-wFi"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="Oes-7M-yA5" secondAttribute="trailing" id="xf0-ae-PKl"/>
+                            <constraint firstItem="ono-fy-f0Q" firstAttribute="trailing" secondItem="p8u-F9-eyi" secondAttribute="trailingMargin" id="yGV-Cj-0TC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q94-eI-pry">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="l03-vB-iAz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="er1-Fd-mIN">
-                                <rect key="frame" x="166" y="246" width="61" height="35"/>
+                                <rect key="frame" x="316" y="4.6666666666666679" width="61" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save">
@@ -83,7 +123,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailsLabel" destination="o35-Xa-7fL" id="Zhk-rZ-MJA"/>
+                        <outlet property="notesLabel" destination="OE7-FP-gMB" id="04X-Rf-08i"/>
                         <outlet property="textField" destination="ono-fy-f0Q" id="fG2-8N-Wq2"/>
+                        <outlet property="textView" destination="Oes-7M-yA5" id="w6t-qj-2Ie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IV-Nz-WPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -114,6 +157,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
